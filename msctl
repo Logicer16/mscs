@@ -2630,7 +2630,7 @@ MIRROR_PATH=$(getDefaultsValue 'mscs-mirror-path' '/dev/shm/mscs')
 
 # Minecraft Overviewer Mapping Software Options
 # ---------------------------------------------------------------------------
-OVERVIEWER_BIN=$(getDefaultsValue 'mscs-overviewer-bin' $(which overviewer.py))
+OVERVIEWER_BIN=$(getDefaultsValue 'mscs-overviewer-bin' $(which overviewer.py 2>/dev/null))
 OVERVIEWER_URL=$(getDefaultsValue 'mscs-overviewer-url' 'http://overviewer.org')
 MAPS_LOCATION=$(getDefaultsValue 'mscs-maps-location' $LOCATION'/maps')
 MAPS_URL=$(getDefaultsValue 'mscs-maps-url' 'http://minecraft.server.com/maps')
