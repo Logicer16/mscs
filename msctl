@@ -1760,7 +1760,7 @@ updateClientSoftware() {
     fi
     SHA1_FILE=$(sha1sum $CLIENT_LOCATION/$CLIENT_JAR | cut -d ' ' -f1)
     if [ $SHA1 != "$SHA1_FILE" ]; then
-      printf "Error verifying the sha1 for the Minecraft client software.\n"
+      printf "Error verifying the sha1 for the Minecraft client software. (This is normal for thirrd-party jars)\n"
       exit 1
     fi
   fi
@@ -1811,7 +1811,7 @@ updateServerSoftware() {
     fi
     SHA1_FILE=$(sha1sum $SERVER_LOCATION/$SERVER_JAR | cut -d ' ' -f1)
     if [ $SHA1 != "$SHA1_FILE" ]; then
-      printf "Error verifying the sha1 for the Minecraft server software.\n"
+      printf "Error verifying the sha1 for the Minecraft server software. (This is normal for thirrd-party jars)\n"
     fi
   fi
 }
